@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda Fixa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Renda Fixa</h1>
+        <div class="cabecalho__resumo">
+            <div class="resumo__info">
+                <span class="resumo__label">Saldo Bruto</span>
+                <span id="saldoBruto" class="resumo__valor">R$ 0,00</span>
+            </div>
+            <div class="resumo__info">
+                <span class="resumo__label">Valor Aplicado</span>
+                <span id="valorAplicado" class="resumo__valor">R$ 0,00</span>
+            </div>
+            <div class="resumo__info">
+                <span class="resumo__label">Resultado</span>
+                <span id="resultado" class="resumo__valor">R$ 0,00</span>
+            </div>
+            <div class="resumo__info">
+                <span class="resumo__label">Rentabilidade</span>
+                <span id="rentabilidade" class="resumo__valor">0%</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Rentabilidade -->
+    <section class="rentabilidade">
+        <h2 class="rentabilidade__titulo">Rentabilidade dos Títulos</h2>
+        <canvas id="rentabilidadeChart" class="rentabilidade__grafico"></canvas>
+    </section>
+
+    
+        <!-- Seção de Rendas Fixas -->
+        <section class="rendas-fixas">
+            <h2 class="rendas-fixas__titulo">Minhas Rendas Fixas</h2>
+    
+            <div class="rendas-fixas__filtros">
+                <input type="text" id="search" class="filtros__input" placeholder="Buscar título...">
+                <select id="sort" class="filtros__select">
+                    <option value="name">Ordenar por Nome</option>
+                    <option value="rate">Ordenar por Rentabilidade</option>
+                </select>
+            </div>
+    
+            <div class="investment-list" id="investment-list">
+                <!-- Os investimentos serão inseridos aqui via JavaScript -->
+            </div>
+    
+            <div id="pagination" class="paginacao">
+                <button class="page-btn page-btn--arrow" id="prevPage">
+                    <i class="fas fa-chevron-left"></i> <!-- Ícone de seta para a esquerda -->
+                </button>
+                <button class="page-btn">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn page-btn--arrow" id="nextPage">
+                    <i class="fas fa-chevron-right"></i> <!-- Ícone de seta para a direita -->
+                </button>
+            </div>
+        </section>
+    
+    
+    <!-- Seção de Gráficos -->
+    <section class="graficos">
+        <div class="graficos__container">
+            <h3 class="graficos__titulo">Divisão de Carteira por Tipos</h3>
+            <canvas id="carteiraTipos" class="graficos__canvas"></canvas>
+        </div>
+        <div class="graficos__container">
+            <h3 class="graficos__titulo">Divisão de Carteira por Título</h3>
+            <canvas id="carteiraTitulos" class="graficos__canvas"></canvas>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>
