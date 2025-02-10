@@ -165,6 +165,9 @@ Agradeço pela oportunidade de participar deste desafio e espero que o resultado
 Elizeu lima
 Linkedin: https://www.linkedin.com/in/elizeu-programador-frontend/
  
+ ![pagina inicial](/assets/teste%20tecnico%20pagina%20inicial.png)
+ ![filtros e api carregada](/assets/segunda%20seção.png)
+ ![graficos](/assets/terceira%20seção.png)
 
 # Licença
 Este projeto é open-source e está disponível sob a licença MIT. Sinta-se à vontade para utilizá-lo como referência ou para fins de estudo.
